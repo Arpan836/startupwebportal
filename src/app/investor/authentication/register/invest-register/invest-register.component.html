@@ -1,0 +1,417 @@
+<form
+  #registrationform="ngForm"
+  (ngSubmit)="getUserFormData(registrationform.value)"
+  class="bg-light"
+>
+  <mat-stepper #stepper>
+    <mat-step>
+      <ng-template matStepLabel>Personal Details</ng-template>
+      <div class="container">
+        <br />
+
+        <div class="col-lg-5 m-auto d-block">
+          <div class="form-group">
+            <label for="name" class="font-weight-regular">First Name </label>
+            <input
+              type="text"
+              placeholder="First-name"
+              class="form-control"
+              id="name"
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label class="font-weight-regular"> Last Name</label>
+            <input
+              type="text"
+              placeholder="Last Name"
+              class="form-control"
+              id="emails"
+              autocomplete="off"
+            />
+            <span id="emailids" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <!-- <div class="form-group">
+            <label class="font-weight-regular"> Age</label>
+            <input
+              type="text"
+              placeholder="Age"
+              class="form-control"
+              id="emails"
+              autocomplete="off"
+            />
+            <span id="emailids" class="text-danger font-weight-regular"> </span>
+          </div> -->
+
+          <div class="form-group">
+            <label class="font-weight-regular"> Gender</label>
+            <input
+              type="text"
+              placeholder="Gender"
+              class="form-control"
+              id="emails"
+              autocomplete="off"
+            />
+            <span id="emailids" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label class="font-weight-regular"> Date Of Birth</label>
+            <input
+              type="date"
+              placeholder="Age"
+              class="form-control"
+              id="emails"
+              autocomplete="off"
+            />
+            <span id="emailids" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label class="font-weight-regular"> Email </label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              name="email"
+              class="form-control"
+              id="emails"
+              autocomplete="off"
+            />
+            <span id="emailids" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label class="font-weight-regular"> Mobile Number </label>
+            <input
+              type="Number"
+              placeholder="Mobile number"
+              name="email"
+              class="form-control"
+              id="emails"
+              autocomplete="off"
+            />
+            <span id="emailids" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label class="font-weight-regular"> Alernate Mobile Number </label>
+            <input
+              type="number"
+              placeholder="Mobile number"
+              name="email"
+              class="form-control"
+              id="emails"
+              autocomplete="off"
+            />
+            <span id="emailids" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <!-- <div class="form-group">
+            <label class="font-weight-regular"> Linked-In</label>
+            <input
+              type="email"
+              placeholder="Enter your Linked-In id"
+              name="email"
+              class="form-control"
+              id="emails"
+              autocomplete="off"
+            />
+            <span id="emailids" class="text-danger font-weight-regular"> </span>
+          </div> -->
+        
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Residence Address
+            </label>
+            <input
+              type="text"
+              placeholder=""
+              class="form-control"
+              id="name"
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Permanent Address
+            </label>
+            <input
+              type="text"
+              placeholder=""
+              class="form-control"
+              id="name"
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular">State </label>
+            <input
+              type="text"
+              placeholder=""
+              class="form-control"
+              id="name"
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Education Qualification
+            </label>
+            <input
+              type="text"
+              placeholder=""
+              class="form-control"
+              id="name"
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+        </div>
+      </div>
+
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Bussiness Details</ng-template>
+      <div class="container">
+        <br />
+
+        <div class="col-lg-5 m-auto d-block">
+          <div class="form-group">
+            <label for="name" class="font-weight-regular">Company Name </label>
+            <input
+              type="text"
+              placeholder=""
+              class="form-control"
+              id="name"
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular">
+              Business category</label
+            >
+            <select id="country" name="country">
+              <option value="usa">Category 1</option>
+              <option value="canada">Category 1</option>
+              <option value="uk">Category 1</option>
+              <option value="australia">Category 1</option>
+              <option value="other">Category 1</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular">
+              Business stage</label
+            >
+            <select id="country" name="country">
+              <option value="usa">Category 1</option>
+              <option value="canada">Category 1</option>
+              <option value="uk">Category 1</option>
+              <option value="australia">Category 1</option>
+              <option value="other">Category 1</option>
+            </select>
+          </div>
+
+          <!-- <div class="form-group">
+            <label for="name" class="font-weight-regular">
+              Industry Category</label
+            >
+            <select id="country" name="country">
+              <option>Select</option>
+              <option *ngFor="let item of countries">{{ item.name }}</option>
+            </select>
+          </div> -->
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Describe your Business in one sentence
+            </label>
+            <input
+              type="text"
+              placeholder=""
+              class="form-control"
+              id="name"
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Current Company Valuation
+            </label>
+            <input
+              type="text"
+              placeholder=""
+              class="form-control"
+              id="name"
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Are you the founder/ Co-Founder of the Company
+            </label>
+            <input
+              type="text"
+              placeholder=""
+              class="form-control"
+              id="name"
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Estimated Number of Employees
+            </label>
+            <input
+              type="text"
+              placeholder=""
+              class="form-control"
+              id="name"
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Number of offices
+            </label>
+            <input
+              type="text"
+              placeholder=""
+              class="form-control"
+              id="name"
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Main Headquarter location
+            </label>
+            <input
+              type="text"
+              placeholder=""
+              class="form-control"
+              id="name"
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >please provide your CIN Number,if your company is registered
+            </label>
+            <input
+              type="text"
+              placeholder=""
+              class="form-control"
+              id="name"
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Have you Ever declared Bankruptcy
+            </label>
+            <input
+              type="text"
+              placeholder=""
+              class="form-control"
+              id="name"
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >How many investors invested in your company till now</label
+            >
+            <input
+              type="text"
+              placeholder=""
+              class="form-control"
+              id="name"
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Total revenue in last Three months</label
+            >
+            <input
+              type="text"
+              placeholder=""
+              class="form-control"
+              id="name"
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Total profit in last Three months</label
+            >
+            <input
+              type="text"
+              placeholder=""
+              class="form-control"
+              id="name"
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Do you have any past or pending legal proceedings/ court cases/
+              complaints/ FIRs etc against your company</label
+            >
+            <input
+              type="text"
+              placeholder=""
+              class="form-control"
+              id="name"
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+        </div>
+      </div>
+      <button mat-button matStepperPrevious>Back</button>
+
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Content1</ng-template>
+      <button>Submit</button>
+      <button mat-button matStepperPrevious>Back</button>
+    </mat-step>
+  </mat-stepper>
+</form>

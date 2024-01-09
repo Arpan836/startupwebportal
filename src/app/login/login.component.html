@@ -1,0 +1,61 @@
+    <h4 class="text-blue text-center font-weight-bold" style="font-size: 20px;">
+      Login
+    </h4>
+
+    <div class="container">
+      <br />
+
+      <div class="col-lg-5 m-auto d-block">
+        <form #loginform="ngForm" (ngSubmit)="loginforall(loginform.value)"
+        class="bg-light">
+          <div class="form-group">
+            <label for="user" class="font-weight-regular"> Username </label>
+            <input
+              type="text"
+              name="username"
+              class="form-control"
+              #username="ngModel"
+              maxlength="30"
+              required
+              autocomplete="off"
+              ngModel
+            />
+       
+            <div id="username" class="text-danger font-weight-regular"
+            *ngIf="username.invalid && username.touched">
+            <span  class="text-danger font-weight-regular"
+            *ngIf="username.hasError('maxlength')">
+            Username must be under 30 characters 
+          </span>
+          
+          </div>
+         
+          </div>
+
+          <div class="form-group">
+            <label class="font-weight-regular"> Password </label>
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              #pass="ngModel"
+              ngModel
+              autocomplete="off"
+            />
+            <div id="password" class="text-danger font-weight-regular"
+            *ngIf="pass.invalid && pass.touched">
+            <span  class="text-danger font-weight-regular"
+            *ngIf="pass.hasError('maxlength')">
+            Username must be under 30 characters 
+          </span>
+          
+          </div>
+          </div>
+<button class="btn btn-success" [disabled]="loginform.invalid">Submit</button>
+         <!-- &emsp;&emsp;&emsp;&emsp; Did not have an account? -->
+          <!-- <a href="index.html">SignUp</a> -->
+        </form>
+
+        <br /><br />
+      </div>
+    </div>

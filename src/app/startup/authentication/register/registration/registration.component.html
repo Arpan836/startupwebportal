@@ -1,0 +1,693 @@
+<form
+  #registrationform="ngForm"
+  (ngSubmit)="getUserFormData(registrationform.value)"
+  class="bg-light"
+>
+  <mat-stepper #stepper>
+    <mat-step>
+      <ng-template matStepLabel>Personal Details</ng-template>
+      <div class="container">
+        <br />
+
+        <div class="col-lg-5 m-auto d-block">
+          <div class="form-group">
+            <label for="name" class="font-weight-regular">First Name </label>
+            <input
+              type="text"
+              placeholder="First-name"
+              name="firstname"
+              class="form-control"
+              #firstname
+              ngModel
+              autocomplete="off"
+            />
+            <span id="_first_name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label class="font-weight-regular"> Last Name</label>
+            <input
+              type="text"
+              placeholder="Last Name"
+              class="form-control"
+              name="lastname"
+              #lastname
+              ngModel
+              autocomplete="off"
+            />
+            <span id="_lastname" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <!-- <div class="form-group">
+            <label class="font-weight-regular"> Age</label>
+            <input
+              type="text"
+              placeholder="Age"
+              class="form-control"
+              id="emails"
+              autocomplete="off"
+            />
+            <span id="emailids" class="text-danger font-weight-regular"> </span>
+          </div> -->
+
+          <div class="form-group">
+            <label class="font-weight-regular"> Gender</label>
+            <!-- <input
+              type="password"
+              placeholder="Gender"
+              name="firstname"
+              class="form-control"
+              #firstname
+              ngModel
+              autocomplete="off"
+            /> -->
+            <br/>
+            <mat-radio-group aria-label="Select an option"  #gender
+            ngModel>
+              <mat-radio-button value="M">Male</mat-radio-button>
+              <mat-radio-button value="F">Female</mat-radio-button>
+            </mat-radio-group>
+            <span id="emailids" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label class="font-weight-regular"> Date Of Birth</label>
+            <input
+              type="date"
+              placeholder="Date of birth"
+              name="dob"
+              class="form-control"
+              #dob
+              ngModel
+              autocomplete="off"
+            />
+            <span id="_dob" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label class="font-weight-regular"> Email </label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              name="email"
+              class="form-control"
+              #email
+              ngModel
+              autocomplete="off"
+            />
+            <span id="_email" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label class="font-weight-regular"> Mobile Number </label>
+            <input
+              type="Number"
+              placeholder="Mobile number"
+              name="mobile"
+              class="form-control"
+              #mobile
+              ngModel
+              autocomplete="off"
+            />
+            <span id="_mobile" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label class="font-weight-regular"> Alernate Mobile Number </label>
+            <input
+              type="number"
+              placeholder="Mobile number"
+              name="altmobile"
+              class="form-control"
+              #altmobile
+              ngModel
+              autocomplete="off"
+            />
+            <span id="_altmobile" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <!-- <div class="form-group">
+            <label class="font-weight-regular"> Linked-In</label>
+            <input
+              type="email"
+              placeholder="Enter your Linked-In id"
+              name="email"
+              class="form-control"
+              id="emails"
+              autocomplete="off"
+            />
+            <span id="emailids" class="text-danger font-weight-regular"> </span>
+          </div> -->
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Residence Address
+            </label>
+            <input
+              type="text"
+              placeholder="Residence Address"
+              name="residence"
+              class="form-control"
+              #residence
+              ngModel
+              autocomplete="off"
+            />
+            <span id="_residence" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Permanent Address
+            </label>
+            <input
+              type="text"
+              placeholder="Permanent Address"
+              name="permanent"
+              class="form-control"
+              #permanent
+              ngModel
+              autocomplete="off"
+            />
+            <span id="_permanent" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <!-- <div class="form-group">
+            <label for="name" class="font-weight-regular">State </label>
+            <input
+              type="text"
+              placeholder=""
+              name="state"
+              class="form-control"
+              #state
+              ngModel
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div> -->
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Education Qualification
+            </label>
+            <input
+              type="text"
+              placeholder="Qualifications"
+              name="education"
+              class="form-control"
+              #education
+              ngModel
+              autocomplete="off"
+            />
+            <span id="_education" class="text-danger font-weight-regular"> </span>
+          </div>
+          <div class="form-group">
+            <label class="font-weight-regular"> Aadhar Number </label>
+            <input
+              type="number"
+              placeholder="Aadhar Number"
+              name="aadhar"
+              class="form-control"
+              #aadhar
+              ngModel
+              autocomplete="off"
+            />
+            <span id="_aadhar" class="text-danger font-weight-regular"> </span>
+          </div>
+          <div class="form-group">
+            <label class="font-weight-regular"> PAN Number </label>
+            <input
+              type="number"
+              placeholder="PAN Number"
+              name="pan"
+              class="form-control"
+              #pan
+              ngModel
+              autocomplete="off"
+            />
+            <span id="_pan" class="text-danger font-weight-regular"> </span>
+          </div>
+        </div>
+      </div>
+
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Bussiness Details</ng-template>
+      <div class="container">
+        <br />
+
+        <div class="col-lg-5 m-auto d-block">
+          <div class="form-group">
+            <label for="name" class="font-weight-regular">Company Name </label>
+            <input
+              type="text"
+              placeholder="Company Name"
+              name="companyname"
+              class="form-control"
+              #companyname
+              ngModel
+              autocomplete="off"
+            />
+            <span id="_companyname" class="text-danger font-weight-regular"> </span>
+          </div>
+          <div class="form-group">
+            <label class="font-weight-regular"> Corporate Email </label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              name="corporateemail"
+              class="form-control"
+              #corporateemail
+              ngModel
+              autocomplete="off"
+            />
+            <span id="_corporateemail" class="text-danger font-weight-regular"> </span>
+          </div>
+          <div class="form-group">
+            <label for="name" class="font-weight-regular">
+              Business category</label
+            >
+            <select     name="businesscategory"
+            class="form-control"
+            #businesscategory
+            ngModel>
+            <option value="0" selected>--Select--</option>
+              <option value="ayurvedic">Ayurvedic</option>
+              <option value="homeopathic">Homeopathic</option>
+              <option value="alopathic">Alopathic</option>
+           
+            </select>
+          </div>
+
+           <div class="form-group">
+            <label for="name" class="font-weight-regular">
+              Business stage</label
+            >
+            <select  name="businessstage"
+            class="form-control"
+            #businessstage
+            ngModel>
+              <option value="1" selected>1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div> 
+
+          <!-- <div class="form-group">
+            <label for="name" class="font-weight-regular">
+              Industry Category</label
+            >
+            <select id="country" name="country">
+              <option>Select</option>
+              <option *ngFor="let item of countries">{{ item.name }}</option>
+            </select>
+          </div> -->
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Describe your Business in one sentence
+            </label>
+            <input
+              type="text"
+              placeholder=""
+              name="businessdescription"
+              class="form-control"
+              #businessdescription
+              ngModel
+              autocomplete="off"
+            />
+            <span id="_businessdescription" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Current Company Valuation
+            </label>
+            <input
+              type="text"
+              placeholder=""
+              name="valuation"
+              class="form-control"
+              #valuation
+              ngModel
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Are you the founder/ Co-Founder of the Company
+            </label>
+            
+            <div class="form-check">
+              <input class="form-check-input" type="radio"  name="founder"
+              #founder
+              value="founder"
+              ngModel checked>
+              <label class="form-check-label" for="flexRadioDefault1">
+              Founder
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio"  name="cofounder"
+              #cofounder
+              ngModel >
+              <label class="form-check-label" for="flexRadioDefault2">
+Cofounder              </label>
+            </div>
+        
+              
+           
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Estimated Number of Employees
+            </label>
+            <input
+              type="text"
+              placeholder=""
+              name="noofemployee"
+              class="form-control"
+              #noofemployee
+              ngModel
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Number of offices
+            </label>
+            <input
+              type="text"
+              placeholder=""
+              name="noofoffices"
+              class="form-control"
+              #noofoffices
+              ngModel
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Main Headquarter location
+            </label>
+            <input
+              type="text"
+              placeholder=""
+              name="headquarterlocation"
+              class="form-control"
+              #headquarterlocation
+              ngModel
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular">
+              Registration Status of the company</label
+            >
+            <select  name="registrationstatus"
+            class="form-control"
+            #registrationstatus
+            ngModel>
+              <option value="unregistered">Unregistered/unincorporated</option>
+              <option value="sole">Sole Proprietorship</option>
+              <option value="llp">Limited Liability partnership</option>
+              <option value="rp">Registered partnership</option>
+              <option value="plc">Private Limited Company</option>
+              <option value="opc">One Person Company</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular">
+              Current Status of Profitability</label
+            >
+            <select  name="profitability"
+            class="form-control"
+            #profitability
+            ngModel>
+              <option value="profit">Profitable</option>
+              <option value="breakeven">Break Even</option>
+              <option value="notprofit">Not Profitable</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular">
+              Funding Status</label
+            >
+            <select  name="fundingstatus"
+            class="form-control"
+            #fundingstatus
+            ngModel>
+              <option value="nf">Not Funded</option>
+              <option value="pf">previously Funded</option>
+              <option value="hf">Heavily Funded</option>
+            </select>
+          </div>
+
+          <!-- <div class="form-group">
+            <label for="user" class="font-weight-regular">
+              Amount of investment you plan to raise</label
+            >
+            <input
+              type="text"
+              name="user"
+              class="form-control"
+              id="user"
+              autocomplete="off"
+            />
+            <span id="username" class="text-danger font-weight-regular"> </span>
+          </div> -->
+<!-- 
+          <div class="form-group">
+            <label for="user" class="font-weight-regular">
+              Equity you plan to offer in exchange for the investment (in
+              percentage)
+            </label>
+            <input
+              type="text"
+              name="user"
+              class="form-control"
+              id="user"
+              autocomplete="off"
+            />
+            <span id="username" class="text-danger font-weight-regular"> </span>
+          </div> -->
+
+          <!-- <div class="form-group">
+            <label for="user" class="font-weight-regular">
+              Income Tax id
+            </label>
+            <input
+              type="number"
+              name="user"
+              class="form-control"
+              id="user"
+              autocomplete="off"
+            />
+            <span id="username" class="text-danger font-weight-regular"> </span>
+          </div> -->
+
+          <div class="form-group">
+            <label for="user" class="font-weight-regular"> GST number </label>
+            <input
+              type="number"
+              name="gst"
+              class="form-control"
+              #gst
+              ngModel
+              autocomplete="off"
+            />
+            <span id="username" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <!-- <div class="form-group">
+            <label for="user" class="font-weight-regular">
+              License number
+            </label>
+            <input
+              type="number"
+              name="licenseno"
+              class="form-control"
+              #valuation
+              ngModel
+              autocomplete="off"
+            />
+            <span id="username" class="text-danger font-weight-regular"> </span>
+          </div> -->
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >CIN Number
+            </label>
+            <input
+              type="text"
+              placeholder=""
+              name="cin"
+              class="form-control"
+              #cin
+              ngModel
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Have you Ever declared Bankruptcy
+            </label>
+            <input
+              type="text"
+              placeholder=""
+              name="bankruptcy"
+              class="form-control"
+              #bankruptcy
+              ngModel
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >How many investors invested in your company till now</label
+            >
+            <input
+              type="text"
+              placeholder=""
+              name="noofinvestor"
+              class="form-control"
+              #noofinvestor
+              ngModel
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Total revenue in last Three months</label
+            >
+            <input
+              type="text"
+              placeholder=""
+              name="last3monrevenue"
+              class="form-control"
+              #last3monrevenue
+              ngModel
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Total profit in last Three months</label
+            >
+            <input
+              type="text"
+              placeholder=""
+              name="profit3mon"
+              class="form-control"
+              #profit3mon
+              ngModel
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label class="font-weight-regular"
+              >Upload brief description of the Company in the form of video
+              format (max length of the video can be 5 minutes)
+            </label>
+
+            <input
+              type="file"
+              name="videoFile"
+              id="videoFile"
+              accept="video/*"
+            />
+
+            <span id="mobileno" class="text-danger font-weight-regular"> </span>
+          </div>
+
+          <div class="form-group">
+            <label for="name" class="font-weight-regular"
+              >Do you have any past or pending legal proceedings/ court cases/
+              complaints/ FIRs etc against your company</label
+            >
+            <input
+              type="text"
+              placeholder=""
+              name="pastproceeding"
+              class="form-control"
+              #pastproceeding
+              ngModel
+              autocomplete="off"
+            />
+            <span id="Name" class="text-danger font-weight-regular"> </span>
+          </div>
+        </div>
+      </div>
+      <button mat-button matStepperPrevious>Back</button>
+
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Content1</ng-template>
+      <div class="container">
+        <div class="col-lg-5 m-auto d-block">
+
+        <div class="form-group">
+          <label for="name" class="font-weight-regular"
+            >Password</label
+          >
+          <input
+            type="text"
+            placeholder=""
+            name="password"
+              class="form-control"
+              #password
+              ngModel
+            autocomplete="off"
+          />
+          <span id="Name" class="text-danger font-weight-regular"> </span>
+
+        </div>
+        <div class="form-group">
+          <label for="name" class="font-weight-regular"
+            >Confirm Password</label
+          >
+          <input
+            type="text"
+            placeholder=""
+            name="confirmpassword"
+              class="form-control"
+              #confirmpassword
+              ngModel
+            autocomplete="off"
+          />
+          <span id="Name" class="text-danger font-weight-regular"> </span>
+
+        </div>
+        <button class="btn btn-success">Submit</button>
+        </div>  
+
+      </div>
+      <button mat-button matStepperPrevious>Back</button>
+    </mat-step>
+  </mat-stepper>
+</form>
